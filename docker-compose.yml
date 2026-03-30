@@ -1,0 +1,13 @@
+version:  '3'
+services:
+  website:
+    build:  .
+    container_name: devops-website
+    ports:
+    -  "8091:80"
+
+  second-nginx:
+    image: nginx
+    container_name: devops-test-nginx
+    ports:
+      -  "8092:80"
